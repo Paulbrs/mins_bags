@@ -16,16 +16,12 @@ export const metadata: Metadata = {
 };
 
 
-export default function HomeLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children}: { children: React.ReactNode }) {
   return (
     <html lang="ru" className={notoSans.className}>
       <body>
         <Header />
-        {children}
+        <main>{children}</main>
         <Footer />
       </body>
     </html>

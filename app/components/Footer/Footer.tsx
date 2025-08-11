@@ -49,7 +49,7 @@ export default function Footer() {
         {/* Нижняя полоса */}
         <div className="border-t border-white/30 mt-6 pt-4 flex flex-col md:flex-row justify-between items-center text-sm text-white/80 mr-5">
           <p>© {new Date().getFullYear()} Mins_bags. Все права защищены.</p>
-          <a href="/privacy"  rel="noopener noreferrer" className="hover:underline">
+          <a href="/privacy" rel="noopener noreferrer" className="hover:underline">
             Политика конфиденциальности
           </a>
         </div>

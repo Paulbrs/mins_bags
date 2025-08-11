@@ -1,3 +1,5 @@
+'use client';
+
 import Link from "next/link";
 
 export default function PrivacyPage() {
@@ -20,13 +22,11 @@ export default function PrivacyPage() {
           <span>
             Если в будущем на сайте появятся функции, связанные с обработкой данных, мы обязательно уведомим об этом пользователей и обновим данную страницу.
           </span>
-          <div className='flex justify-center pt-30'>
-            <Link legacyBehavior href="/">
-              <a className=" px-6 py-3 bg-sand-dark text-white rounded-2xl hover:underline transition">
+          <span className='flex justify-center pt-30'>
+            <Link className=" px-6 py-3 bg-sand-dark text-white rounded-2xl hover:underline transition" href="/">
                 Вернуться на главную
-              </a>
             </Link>
-          </div>
+          </span>
         </p>
       </section>
     </main>

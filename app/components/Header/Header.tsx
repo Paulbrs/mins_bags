@@ -1,6 +1,32 @@
+'use client';
+
+import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 
 export default function Header() {
+  const pathname = usePathname();
+
+  const minimalPages = ["/privacy"];
+  const isMinimal = minimalPages.includes(pathname);
+
+  if(isMinimal) {
+    return (
+      <header className="bg-sand-dark px-10 py-4 flex items-center justify-between">
+        <div className="flex items-center gap-4">
+          <Image 
+            src="/logo.png"
+            alt="Логотип Mins_bags"
+            width={64}
+            height={64}
+            style={{ objectFit: 'contain' }}
+          />
+          <span className="text-white font-semibold text-3xl">Mins_bags</span>
+        </div>
+      </header>
+    )
+  }
+
+
   return (
     <header className="bg-sand-dark px-10 py-4 flex items-center justify-between">
       {/* Левая часть — логотип + название */}
